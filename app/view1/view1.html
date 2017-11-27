@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="rooms" ng-repeat="room in rooms" class="col-md-6">
+        <div class="room">
+            <p>{{room.name}}</p>
+            <p>{{room.description}}</p>
+            <p>{{room.capacity}}</p>
+            <div nb-repeat="equipement in room.equipements">
+                <p class="equipement">{{equipement.name}}</p>
+            </div>
+            <p>{{room.createdAt | date}}</p>
+            <p>{{room.updatedAt | date}}</p>
+        </div>
+    </div>
+</div>

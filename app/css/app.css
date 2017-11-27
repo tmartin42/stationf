@@ -1,0 +1,25 @@
+/* app css stylesheet */
+
+.menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba();
+}
+
+.menu img {
+    position: absolute;
+    height: auto;
+    width: 30vw;
+    top: calc(30vh - (30vw * (16/100)) / 2);
+    left: 35vw;
+}
+
+.menu button {
+
+}
+
+.menu li {
+    display: none;
+}
