@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'FabrikatLight';
+    src: url("../fonts/Fabrikat-Light.eot");
+    src: url("../fonts/Fabrikat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Fabrikat-Light.woff") format("woff"), url("../fonts/Fabrikat-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FabrikatRegular';
+    src: url("../fonts/Fabrikat-Regular.eot");
+    src: url("../fonts/Fabrikat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Fabrikat-Regular.woff") format("woff"), url("../fonts/Fabrikat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FabrikatMedium';
+    src: url("../fonts/Fabrikat-Medium.eot");
+    src: url("../fonts/Fabrikat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Fabrikat-Medium.woff") format("woff"), url("../fonts/Fabrikat-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FabrikatBold';
+    src: url("../fonts/Fabrikat-Bold.eot");
+    src: url("../fonts/Fabrikat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Fabrikat-Bold.woff") format("woff"), url("../fonts/Fabrikat-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
