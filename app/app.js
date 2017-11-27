@@ -12,7 +12,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]).controller('appController', ['$scope', function($scope) {
-  $scope.view = 'none';
+  $scope.view = 'minimized';
   $scope.transition = function(){
     $scope.view = 'minimized';
   }

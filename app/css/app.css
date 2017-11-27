@@ -1,12 +1,16 @@
 /* app css stylesheet */
 
+body {
+    font-family: "LektonRegular";
+}
+
 .menu {
     position: fixed;
     height: 100%;
     width: 100%;
     text-align: left;
     z-index: 2;
-
+    background: white;
 }
 
 .menu .logo {
@@ -78,6 +82,8 @@
     font-family: "FabrikatMedium";
     line-height: 70px;
     color: #000;
+    background: white;
+    transition: 0.5s;
 }
 
 .menu a:nth-child(2) {
@@ -118,4 +124,38 @@
 .menu.minimized a {
     opacity: 1;
     pointer-events: auto;
+}
+
+.main {
+    padding-top: 100px;
+}
+
+.row {
+    padding: 8px 20px;
+}
+
+.form-inline {
+    border-bottom: 1px solid grey;
+    display: block;
+}
+
+.form-inline input {
+    border: none !important;
+    border-bottom: 1px solid #ececec !important;
+    border-radius: 0px;
+    box-shadow: none !important;
+}
+
+.form-inline .btn-group.first .btn {
+    margin-right: -1px;
+}
+
+.form-inline .btn {
+    height: 36px;
+    border-width: 1px;
+    width: 45px;
+}
+
+.form-inline .btn-group {
+    float: right;
 }
