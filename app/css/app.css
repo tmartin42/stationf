@@ -165,8 +165,9 @@ body {
     font-family: "FabrikatBold";
     background: url(/img/room_low.jpg);
     background-size: contain;
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
+    padding: 0;
 }
 
 
@@ -176,18 +177,19 @@ body {
     position: relative;
     content:" ";
     background: rgba(0, 0, 0, 0.85);
-    width: calc(100% + 30px);
-    margin-left: -15px;
-    padding-top: calc(100% + 30px);
+    width: 100%;
+    padding-top: 100%;
     transition: 0.3s;
 }
 
 .room:hover {
     color: #000;
+    transition: 0.3s;
 }
 
 .room:hover:before {
-    background: rgba(229, 242, 242, 0.85);
+    background: rgba(229, 242, 242, 0.9);
+    transition: 0.3s;
 
 }
 
@@ -198,8 +200,39 @@ body {
 
 .room .name {
     top: 30%;
-    width: calc(100% - 30px);
+    width: 100%;
     font-size: 20px;
+    padding: 0 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: top 0.3s;
+}
+
+.room .description {
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    font-family: "FabrikatLight";
+    top: 30%;
+    font-size: 12px;
+    padding: 0 10%;
+    text-align: left;
+    max-height: 90px;
+    overflow: hidden;
+    overflow-wrap: normal;
+    transition: opacity 0.2s;
+}
+
+.room:hover .name {
+    top: 10%;
+    transition: top 0.3s;
+}
+
+.room:hover .description {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s 0.3s;
 }
 
 .room .places {
