@@ -75,30 +75,44 @@ angular.module('myApp.view1', ['ngRoute'])
         console.log("Rdv le: ", data);
 
 
+    $scope.error = function () {
+        $('.message').removeClass('above');
+        setTimeout(function () {
+            $('.message').addClass('error');
+        }, 100);
+        setTimeout(function () {
+            $('.error').removeClass('error').addClass('above');
+        }, 3100);
+    };
+
+    $scope.success = function() {
+        $('.message').removeClass('above')
+        setTimeout(function () {
+            $('.message').addClass('success');
+        }, 100);
+        setTimeout(function () {
+            $('.success').removeClass('success').addClass('above');
+        }, 3100);
+    };
 
         $('#exampleModal').modal('hide');
 
         if (moment(data).isValid()) {
 
-            //normalement ajax ici avec ceci dans le cas de succes. il faut penser au cas ou l'AJAX renvoie une erreur
+            if (moment(data).isBefore(moment())) {
+                $scope.message = "Bien essaye ! Mais non tu ne peux pas etre dans le passe";
+                $('.logo').addClass('outatime');
+                $scope.error();
+            } else {
+                //normalement ajax ici avec ceci dans le cas de succes. il faut penser au cas ou l'AJAX renvoie une erreur
 
-            $scope.message = "Prise de rendez-vous reussie ! Elle sera le " + moment(data).format("DD/MM/YYYY[ a ]HH[h]mm").toString();
-            $('.message').removeClass('above')
-            setTimeout(function () {
-                $('.message').addClass('success');
-            }, 100);
-            setTimeout(function () {
-                $('.success').removeClass('success').addClass('above');
-            }, 3100);
+                $scope.message = "Prise de rendez-vous reussie ! Elle sera le " + moment(data).format("DD/MM/YYYY[ a ]HH[h]mm").toString();
+                $scope.success();
+            }
+
         } else {
             $scope.message = "Erreur: Date invalide";
-            $('.message').removeClass('above');
-            setTimeout(function () {
-                $('.message').addClass('error');
-            }, 100);
-            setTimeout(function () {
-                $('.error').removeClass('error').addClass('above');
-            }, 3100);
+            $scope.error();
         }
 
     };

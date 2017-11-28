@@ -28,6 +28,15 @@ body {
     z-index: 4;
 }
 
+.menu.minimized .logo.outatime {
+    background: url(/img/outatime.gif);
+    background-size: cover;
+    background-position: 50%;
+}
+.menu .logo.outatime *{
+    display: none;
+}
+
 .menu img {
     position: relative;
     display: block;

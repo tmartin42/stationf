@@ -8,7 +8,6 @@ var app = angular.module('myApp', [
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]).controller('appController', ['$scope', function($scope) {
