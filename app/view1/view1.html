@@ -19,7 +19,7 @@
 
     </form>
     <div class="rooms row justify-content-around">
-        <div class="room col-2" ng-repeat="room in rooms" class="col-md-6">
+        <div class="room col-2" ng-repeat="room in rooms" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
 
@@ -28,6 +28,28 @@
             <div class="equipements">
             <i ng-repeat="equipement in room.equipements" class="equipement fa fa-{{equipement.name}}">
             </i>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{selected.name}}</h5>
+                </div>
+                <div class="modal-body">
+                    {{selected.description}}
+                </div>
+                <div class="modal-footer more-infos">
+                    <div class="places">{{selected.capacity}} <i class="fa fa-users" aria-hidden="true"></i></div>
+                    <div class="equipements">
+                    <i ng-repeat="sequipement in selected.equipements" class="equipement fa fa-{{sequipement.name}}"></i>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary">Reserver</button>
+                </div>
             </div>
         </div>
     </div>

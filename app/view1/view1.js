@@ -19,7 +19,10 @@ angular.module('myApp.view1', ['ngRoute'])
    // console.log(data);
   });
 
+    $scope.modalInit = function (index) {
+        $scope.selected = $scope.rooms[index];
 
+    }
 
     $scope.showData = function() {
       console.log($scope.rooms);

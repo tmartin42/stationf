@@ -265,3 +265,55 @@ body {
     content: "\f26c";
 }
 
+
+.modal {
+    top: 10%;
+    margin: 0 auto;
+}
+
+.modal-content {
+    border-radius: 0px;
+    border: none;
+    font-family: "FabrikatMedium";
+}
+
+.modal-header {
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    border: none;
+    color: white;
+    background-color: #60697F;
+    border-radius: 0px;
+}
+
+.modal-body {
+    border: none;
+    max-height: 39vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "LektonRegular";
+}
+
+.modal-footer {
+    border: none;
+    padding: 10px 10px 15px;
+    display: block;
+    text-align: center;
+}
+
+.modal-footer .btn {
+    width: 110px;
+}
+
+.more-infos {
+    padding: 0px 15px;
+}
+
+.more-infos .places {
+    float: left;
+}
+
+.more-infos .equipements {
+    float: right;
+ }

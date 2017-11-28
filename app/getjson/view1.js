@@ -10,7 +10,6 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope', '$http', function($scope, $http) {
-  $scope.lol = 'lol';
   var obj = {content:null};
 
   $http.get('data/rooms.json').success(function(data) {
@@ -21,5 +20,10 @@ angular.module('myApp.view1', ['ngRoute'])
 
     $scope.showData = function() {
       console.log(obj);
+    }
+
+    $scope.modalInit = function (index) {
+      $scope.selected = obj
+
     }
 }]);
