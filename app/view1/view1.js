@@ -69,12 +69,6 @@ angular.module('myApp.view1', ['ngRoute'])
     };
 
 
-    $scope.submitBooking = function() {
-
-        var data = $('#date').val();
-        console.log("Rdv le: ", data);
-
-
     $scope.error = function () {
         $('.message').removeClass('above');
         setTimeout(function () {
@@ -95,6 +89,24 @@ angular.module('myApp.view1', ['ngRoute'])
         }, 3100);
     };
 
+    $scope.contain = function(roomName) {
+        var ret = false;
+        $scope.rooms.forEach(function(room) {
+            if (room.name == roomName) {
+                ret = true;
+                return;
+            }
+        })
+        return ret;
+    };
+
+    $scope.submitBooking = function(room) {
+
+        var data = $('#date').val();
+        var dataRoomName = room.name;
+        console.log("Rdv le: ", data, " a la ", dataRoomName);
+
+
         $('#exampleModal').modal('hide');
 
         if (moment(data).isValid()) {
@@ -103,10 +115,13 @@ angular.module('myApp.view1', ['ngRoute'])
                 $scope.message = "Bien essaye ! Mais non tu ne peux pas etre dans le passe";
                 $('.logo').addClass('outatime');
                 $scope.error();
+            } else if (!$scope.contain(dataRoomName)) {
+                $scope.message = "Erreur: cette salle n'existe pas";
+                $scope.error();
             } else {
                 //normalement ajax ici avec ceci dans le cas de succes. il faut penser au cas ou l'AJAX renvoie une erreur
 
-                $scope.message = "Prise de rendez-vous reussie ! Elle sera le " + moment(data).format("DD/MM/YYYY[ a ]HH[h]mm").toString();
+                $scope.message = "Prise de rendez-vous reussie ! Elle sera le " + moment(data).format("DD/MM/YYYY[ a ]HH[h]mm").toString() + " dans la " + dataRoomName;
                 $scope.success();
             }
 
