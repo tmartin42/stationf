@@ -150,7 +150,7 @@ body {
     margin-right: -1px;
 }
 
-.row.form-inline .btn {
+.form-inline .btn {
     height: 36px;
     border-width: 1px;
     width: 45px;
@@ -319,11 +319,10 @@ body {
     float: right;
  }
 
-.bootstrap-datetimepicker-widget a {
-    color: #2c7bff;
+
+.modal-body .btn {
+    margin-top: 0px !important;
 }
-
-
 /*
 
 .modal-body .date {

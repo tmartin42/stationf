@@ -39,7 +39,8 @@
                     <h5 class="modal-title" id="exampleModalLabel">{{selected.name}}</h5>
                 </div>
                 <div class="modal-body">
-                    {{selected.description}}
+                    <div>{{selected.description}}</div>
+
                 </div>
                 <div class="modal-footer more-infos">
                     <div class="places">{{selected.capacity}} <i class="fa fa-users" aria-hidden="true"></i></div>
@@ -48,7 +49,16 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <form class="form-inline justify-content-center">
+
+                        <div class="input-group date col-7" id="datetimepicker1" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                            <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
                     <button type="button" class="btn btn-outline-primary">Reserver</button>
+                    </form>
                 </div>
             </div>
         </div>

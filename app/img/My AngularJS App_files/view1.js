@@ -28,8 +28,10 @@ angular.module('myApp.view1', ['ngRoute'])
       console.log($scope.rooms);
     }
     $('#datetimepicker1').datetimepicker({
+        keepOpen: true,
         format: 'DD:MM:YYYY HH:mm',
         stepping: 30,
-        minDate: moment(),
+        minDate: moment()
+
     });
 }]);
