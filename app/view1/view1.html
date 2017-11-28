@@ -5,13 +5,13 @@
             <label for="places" class="sr-only">Recherche</label>
             <input id="places" type="number" ng-model="places" class="form-control col-1" placeholder="Places" ng-keypress="clear(places)">
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-outline-primary" ng-model="tv"  ng-click="test('tv')">
+            <label class="btn btn-outline-primary" ng-model="tv"  ng-click="checkbox('tv')">
                 <input type="checkbox" checked autocomplete="off">
                 <i class="fa fa-television" aria-hidden="true"></i>
             </label>
         </div>
             <div class="btn-group first" data-toggle="buttons">
-            <label class="btn btn-outline-primary"  ng-model="proj" ng-click="test('proj')">
+            <label class="btn btn-outline-primary"  ng-model="proj" ng-click="checkbox('proj')">
                 <input type="checkbox" autocomplete="off">
                 <i class="fa fa-video-camera" aria-hidden="true"></i>
             </label>
@@ -52,15 +52,18 @@
                     <form class="form-inline justify-content-center align-items-center">
 
                         <div class="input-group date col-7" id="datetimepicker1" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                            <input id="date" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
                             <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
                                 <span class="fa fa-calendar"></span>
                             </span>
                         </div>
-                    <button type="button" class="btn btn-outline-primary">Reserver</button>
+                    <button type="button" class="btn btn-primary" ng-click="submitBooking()">Reserver</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="message">
+    {{message}}
 </div>

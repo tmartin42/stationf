@@ -56,9 +56,31 @@ body {
     transition: 0.3s ease;
 }
 
+.btn-primary {
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: #2c7bff;
+    background-image: none;
+    border-color: #2c7bff;
+    border-width: 2px;
+    font-family: "FabrikatBold";
+    outline: none;
+    box-shadow: none !important;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: 0.3s ease;
+}
+
 .btn-outline-primary:hover {
     color: #FF00AE;
     background-color: transparent;
+    background-image: none;
+    border-color: #FF00AE;
+}
+
+.btn-primary:hover {
+    background-color: #FF00AE;
     background-image: none;
     border-color: #FF00AE;
 }
@@ -67,6 +89,13 @@ body {
     color: #fff;
     background-color:  #FF00AE;
     border-color: #FF00AE;
+    transition: 0.1s ease;
+}
+
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color:  #b8007d;
+    border-color: #b8007d;
     transition: 0.1s ease;
 }
 
@@ -200,7 +229,7 @@ body {
 }
 
 .room .name {
-    top: 30%;
+    top: 40%;
     width: 100%;
     font-size: 20px;
     padding: 0 10%;
@@ -323,7 +352,51 @@ body {
 .bootstrap-datetimepicker-widget a {
     color: #2c7bff;
 }
+#datetimepicker1 {
+    margin-top: 2px;
+}
 
+.message {
+    display: block;
+    position: fixed;
+    background: white;
+    border: 2px solid pink;
+    bottom: -70px;
+    right: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 80px);
+    font-family: "LektonRegular";
+    padding: 20px 30px;
+    line-height: 14px;
+    height: 57px;
+    pointer-events: none;
+    opacity: 0;
+    color: black;
+
+}
+
+.message.success, .message.error {
+    bottom: 20px;
+    pointer-events: auto;
+    opacity: 1;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.message.success {
+    border: 2px solid #00E666;
+}
+
+.message.error {
+    border: 2px solid #FF005A;
+
+}
+
+.message.above {
+    bottom: 72px;
+    opacity: 0;
+    transition: bottom 0.5s, border 0.5s 0s, opacity 0.5s, color 0.5s 0s;
+}
 
 /*
 
