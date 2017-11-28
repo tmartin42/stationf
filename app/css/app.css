@@ -379,7 +379,7 @@ body {
     height: 57px;
     pointer-events: none;
     opacity: 0;
-    color: black;
+    color: white;
 
 }
 
@@ -392,10 +392,12 @@ body {
 
 .message.success {
     border: 2px solid #00E666;
+    color: #00E666;
 }
 
 .message.error {
     border: 2px solid #FF005A;
+    color: #FF005A;
 
 }
 
