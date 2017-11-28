@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="row form-inline">
+    <form class="row form-inline block">
             <label for="search" class="sr-only">Recherche</label>
             <input id="search" type="text" ng-model="search" class="form-control col-2" placeholder="Rechercher" >
             <label for="places" class="sr-only">Recherche</label>
@@ -19,7 +19,7 @@
 
     </form>
     <div class="rooms row justify-content-left">
-        <div class="room col-2" ng-repeat="room in rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter()" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
+        <div class="room col-2" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter())" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
 
@@ -30,7 +30,7 @@
             </i>
             </div>
         </div>
-
+        <div class="empty" ng-show="!filteredrooms.length">Aucunes salles ne sont presentes ou ne correspond a vos criteres.</div>
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

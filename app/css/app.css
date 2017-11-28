@@ -192,6 +192,10 @@ body {
     float: right;
 }
 
+.empty {
+    padding: 20px;
+}
+
 .room {
     color: white;
     font-family: "FabrikatBold";
