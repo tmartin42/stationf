@@ -4,6 +4,10 @@ body {
     font-family: "LektonRegular";
 }
 
+.block {
+    display: block;
+}
+
 .menu {
     position: fixed;
     height: 100%;
@@ -165,7 +169,6 @@ body {
 
 .row.form-inline {
     border-bottom: 1px solid grey;
-    display: block;
 }
 
 .form-inline input {
@@ -197,7 +200,7 @@ body {
     transition: 0.3s;
     cursor: pointer;
     padding: 0;
-    margin: 0 1.666667%;
+    margin: 1.666667% 1.666667%;
 }
 
 
@@ -352,7 +355,7 @@ body {
 .bootstrap-datetimepicker-widget a {
     color: #2c7bff;
 }
-#datetimepicker1 {
+.modal-footer #datetimepicker1 {
     margin-top: 2px;
 }
 
