@@ -188,8 +188,17 @@ body {
     width: 45px;
 }
 
-.form-inline .btn-group {
+.form-inline .btn-group, .form-inline.block #selecttri {
     float: right;
+}
+.form-inline #selecttri {
+    width: 165px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    box-shadow: none;
+    margin-left: auto;
+    font-family: "FabrikatMedium";
 }
 
 .empty {

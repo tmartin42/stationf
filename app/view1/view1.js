@@ -99,6 +99,23 @@ angular.module('myApp.view1', ['ngRoute'])
         }
 
     };
-
+    $scope.rev = false;
+    $scope.order = 'name';
+    $scope.selectval = 'az';
+    $scope.changeOrder= function (val) {
+        if (val == 'az'){
+            $scope.rev = false;
+            $scope.order = "name";
+        } else if (val == 'za'){
+            $scope.rev = true;
+            $scope.order = "name";
+        } else if (val == 'pu'){
+            $scope.rev = false;
+            $scope.order = "capacity";
+        } else if (val == 'pd'){
+            $scope.rev = true;
+            $scope.order = "capacity";
+        }
+    }
 
 }]);

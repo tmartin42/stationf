@@ -29,11 +29,35 @@ angular.module('myApp.view2', ['ngRoute'])
     })
 
     $scope.datefilter = function(prop, val){
-
         return function(item){
             if (val == undefined || !moment(val).isValid())
                 return true;
             return moment(item[prop]).isSame(val, 'day');
         }
     };
+
+    $scope.rev = false;
+    $scope.order = 'booked';
+
+    $scope.changeOrder= function (val) {
+        if (val == 'az'){
+            $scope.rev = false;
+            $scope.order = "name";
+        } else if (val == 'za'){
+            $scope.rev = true;
+            $scope.order = "name";
+        } else if (val == 'pu'){
+            $scope.rev = false;
+            $scope.order = "capacity";
+        } else if (val == 'pd'){
+            $scope.rev = true;
+            $scope.order = "capacity";
+        } else if (val == 'du'){
+            $scope.rev = false;
+            $scope.order = "booked";
+        } else if (val == 'dd'){
+            $scope.rev = true;
+            $scope.order = "booked";
+        }
+    }
 }]);

@@ -17,9 +17,16 @@
             </label>
         </div>
 
+
+        <select ng-init="selectval = az" class="form-control" value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
+            <option value="az" selected="selected">A-Z</option>
+            <option value="za">Z-A</option>
+            <option value="pu">Places &uarr;</option>
+            <option value="pd">Places &darr;</option>
+        </select>
     </form>
     <div class="rooms row justify-content-left">
-        <div class="room col-2" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter())" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
+        <div class="room col-2" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter() | orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
 
