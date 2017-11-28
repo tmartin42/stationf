@@ -16,4 +16,4 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $scope.transition = function(){
     $scope.view = 'minimized';
   }
-}]);
+}])

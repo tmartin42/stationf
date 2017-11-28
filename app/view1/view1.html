@@ -5,13 +5,13 @@
             <label for="places" class="sr-only">Recherche</label>
             <input id="places" type="number" ng-model="places" class="form-control col-1" placeholder="Places" ng-keypress="clear(places)">
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-outline-primary">
+            <label class="btn btn-outline-primary" ng-model="tv"  ng-click="test('tv')">
                 <input type="checkbox" checked autocomplete="off">
                 <i class="fa fa-television" aria-hidden="true"></i>
             </label>
         </div>
             <div class="btn-group first" data-toggle="buttons">
-            <label class="btn btn-outline-primary">
+            <label class="btn btn-outline-primary"  ng-model="proj" ng-click="test('proj')">
                 <input type="checkbox" autocomplete="off">
                 <i class="fa fa-video-camera" aria-hidden="true"></i>
             </label>
@@ -19,7 +19,7 @@
 
     </form>
     <div class="rooms row justify-content-left">
-        <div class="room col-2" ng-repeat="room in rooms | filter : greaterThan('capacity', places) | filter  :{'name': search}" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
+        <div class="room col-2" ng-repeat="room in rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter()" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
 

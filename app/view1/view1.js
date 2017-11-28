@@ -13,7 +13,9 @@ angular.module('myApp.view1', ['ngRoute'])
 
 
   $scope.rooms = null;
-    $scope.places = "0";
+  $scope.places = '';
+  $scope.tv = false;
+  $scope.proj = false;
 
   $http.get('/data/rooms.json').success(function(data) {
     // you can do some processing here
@@ -33,11 +35,32 @@ angular.module('myApp.view1', ['ngRoute'])
     };
 
     $scope.greaterThan = function(prop, val){
-        console.log()
         return function(item){
             return Number(item[prop]) >= Number(val);
         }
     }
+
+    $scope.equfilter = function(){
+        return function (rooms) {
+            if (!$scope.tv && !$scope.proj)
+                return rooms;
+            var i;
+            var len;
+            var ret = [];
+           // console.log(rooms);
+                var ok = true;
+                console.log($scope.tv);
+                console.log((rooms.equipements.length > 0 && rooms.equipements[0].name != 'TV'))
+            console.log((rooms.equipements.length > 1 && rooms.equipements[1].name != "TV"))
+
+                if ($scope.tv &&  (rooms.equipements.length == 0 || (rooms.equipements.length == 1 && rooms.equipements[0].name != 'TV') || (rooms.equipements.length > 1 && rooms.equipements[0].name != 'TV' && rooms.equipements[1].name != "TV")))
+                    ok = false;
+                if ($scope.proj && (rooms.equipements.length == 0 || (rooms.equipements.length == 1 && rooms.equipements[0].name != 'Retro Projecteur') || (rooms.equipements.length > 1 && rooms.equipements[0].name != 'Retro Projecteur' && rooms.equipements[1].name != "Retro Projecteur")))
+                    ok = false;
+           console.log('-----')
+            return ok;
+        }
+    };
 
     $scope.showData = function() {
       console.log($scope.rooms);
@@ -45,7 +68,15 @@ angular.module('myApp.view1', ['ngRoute'])
     $('#datetimepicker1').datetimepicker({
         format: 'DD:MM:YYYY HH:mm',
         stepping: 30,
-        minDate: moment(),
+        minDate: moment()
     });
 
-}]);
+    $scope.test = function(model){
+        if ($scope[model])
+            $scope[model] = false;
+        else
+            $scope[model] = true;
+    };
+
+
+}])
