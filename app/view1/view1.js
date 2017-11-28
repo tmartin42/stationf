@@ -17,6 +17,9 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.tv = false;
   $scope.proj = false;
 
+  $('.menu a').removeClass('active');
+  $('.menu a[href="#!/view1"]').addClass('active');
+
   $http.get('/data/rooms.json').success(function(data) {
       $scope.rooms = data.rooms;
 

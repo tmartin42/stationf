@@ -16,6 +16,10 @@ angular.module('myApp.view2', ['ngRoute'])
 
     });
 
+
+    $('.menu a').removeClass('active');
+    $('.menu a[href="#!/view2"]').addClass('active');
+
     $('#datetimepicker1').datetimepicker({
         format: 'YYYY-MM-DD',
         stepping: 30

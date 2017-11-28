@@ -76,6 +76,510 @@
         }
       ],
       "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
+    },
+    {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-07T12:30:00"
+    },
+    {
+      "name":"Salle #1",
+      "description":"Salle #1",
+      "capacity":5,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T20:30:00"
+    },
+    {
+      "name":"Salle nulle",
+      "description":"Salle nulle",
+      "capacity":26,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-08T21:30:00"
+    },
+    {
+      "name":"Salle de ouf",
+      "description":"Salle de ouf",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-09T08:30:00"
+    }, {
+      "name":"Salle #2",
+      "description":"Salle #2",
+      "capacity":10,
+      "equipements":[
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "booked":"2016-12-24T23:30:00"
     }
   ]
 }

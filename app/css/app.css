@@ -119,6 +119,10 @@ body {
     transition: 0.5s;
 }
 
+.menu a.active {
+    background: #E5F2F2;
+}
+
 .menu a:nth-child(2) {
     margin-left: 216px;
 }
@@ -199,6 +203,12 @@ body {
     box-shadow: none;
     margin-left: auto;
     font-family: "FabrikatMedium";
+}
+
+.rooms {
+    max-height: calc(100vh - 200px);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .empty {
