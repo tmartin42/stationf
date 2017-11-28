@@ -70,9 +70,15 @@ angular.module('myApp.view1', ['ngRoute'])
 
         var data = $('#date').val();
         console.log("Rdv le: ", data);
+
+
+
         $('#exampleModal').modal('hide');
 
         if (moment(data).isValid()) {
+
+            //normalement ajax ici avec ceci dans le cas de succes. il faut penser au cas ou l'AJAX renvoie une erreur
+
             $scope.message = "Prise de rendez-vous reussie ! Elle sera le " + moment(data).format("DD/MM/YYYY[ a ]HH[h]mm").toString();
             $('.message').removeClass('above')
             setTimeout(function () {

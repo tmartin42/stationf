@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-    font-family: "LektonRegular";
+    font-family: "Lekton";
 }
 
 .block {
@@ -330,7 +330,7 @@ body {
     min-height: 250px;
     overflow-x: hidden;
     overflow-y: auto;
-    font-family: "LektonRegular";
+    font-family: "Lekton";
 }
 
 .modal-footer {
@@ -373,7 +373,7 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: calc(100% - 80px);
-    font-family: "LektonRegular";
+    font-family: "Lekton";
     padding: 20px 30px;
     line-height: 14px;
     height: 57px;
