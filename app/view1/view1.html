@@ -18,16 +18,16 @@
         </div>
 
     </form>
-    <div class="rooms row" ng-repeat="room in rooms" class="col-md-6">
-        <div class="room">
-            <p>{{room.name}}</p>
-            <p>{{room.description}}</p>
-            <p>{{room.capacity}}</p>
-            <div nb-repeat="equipement in room.equipements">
-                <p class="equipement">{{equipement.name}}</p>
+    <div class="rooms row justify-content-around">
+        <div class="room col-2" ng-repeat="room in rooms" class="col-md-6">
+            <p class="name">{{room.name}}</p>
+
+            <p class="places">{{room.capacity}} <i class="fa fa-users" aria-hidden="true"></i></p>
+
+            <div class="equipements">
+            <i ng-repeat="equipement in room.equipements" class="equipement fa fa-{{equipement.name}}">
+            </i>
             </div>
-            <p>{{room.createdAt | date}}</p>
-            <p>{{room.updatedAt | date}}</p>
         </div>
     </div>
 </div>
