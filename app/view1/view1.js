@@ -10,18 +10,33 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope', '$http', function($scope, $http) {
-  $scope.lol = 'lol';
-  $scope.rooms = {rooms:null};
+
+
+  $scope.rooms = null;
+    $scope.places = "0";
 
   $http.get('/data/rooms.json').success(function(data) {
     // you can do some processing here
-    $scope.rooms = data.rooms;
+      $scope.rooms = data.rooms;
    // console.log(data);
+
   });
 
     $scope.modalInit = function (index) {
         $scope.selected = $scope.rooms[index];
 
+    }
+
+
+    $scope.clear = function(model){
+
+    };
+
+    $scope.greaterThan = function(prop, val){
+        console.log()
+        return function(item){
+            return Number(item[prop]) >= Number(val);
+        }
     }
 
     $scope.showData = function() {
@@ -32,4 +47,5 @@ angular.module('myApp.view1', ['ngRoute'])
         stepping: 30,
         minDate: moment(),
     });
+
 }]);

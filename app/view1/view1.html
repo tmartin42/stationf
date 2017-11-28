@@ -1,9 +1,9 @@
 <div class="container">
     <form class="row form-inline">
             <label for="search" class="sr-only">Recherche</label>
-            <input id="search" type="text" class="form-control col-2" placeholder="Recherche">
+            <input id="search" type="text" ng-model="search" class="form-control col-2" placeholder="Rechercher" >
             <label for="places" class="sr-only">Recherche</label>
-            <input id="places" type="number" class="form-control col-1" placeholder="Places">
+            <input id="places" type="number" ng-model="places" class="form-control col-1" placeholder="Places" ng-keypress="clear(places)">
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-outline-primary">
                 <input type="checkbox" checked autocomplete="off">
@@ -18,8 +18,8 @@
         </div>
 
     </form>
-    <div class="rooms row justify-content-around">
-        <div class="room col-2" ng-repeat="room in rooms" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
+    <div class="rooms row justify-content-left">
+        <div class="room col-2" ng-repeat="room in rooms | filter : greaterThan('capacity', places) | filter  :{'name': search}" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
 
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <form class="form-inline justify-content-center">
+                    <form class="form-inline justify-content-center align-items-center">
 
                         <div class="input-group date col-7" id="datetimepicker1" data-target-input="nearest">
                             <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
