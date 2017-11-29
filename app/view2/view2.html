@@ -31,7 +31,7 @@
         </div>
         <div class="room col-lg-2 col-md-3 col-sm-5 col-5" ng-repeat="room in filteredrooms = (rooms | filter  :{'name': search} | filter: datefilter('booked', date)| orderBy: order:rev)"  data-toggle="modal" data-target="#exampleModal">
             <p class="name">{{room.name}}</p>
-            <p class="description">{{room.booked | date : "dd/MM/yyyy HH:mm"}}</p>
+            <p class="description">Du {{room.booked | date : "dd/MM/yyyy HH:mm"}} au {{room.to | date : "dd/MM/yyyy HH:mm"}} par {{room.by}} pour {{room.why}}</p>
 
             <p class="places">{{room.capacity}} <i class="fa fa-users" aria-hidden="true"></i></p>
 
