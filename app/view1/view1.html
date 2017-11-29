@@ -1,9 +1,12 @@
 <div class="container">
     <form class="row form-inline block">
+        <div class="future-row">
             <label for="search" class="sr-only">Recherche</label>
-            <input id="search" type="text" ng-model="search" class="form-control col-2" placeholder="Rechercher" >
+            <input id="search" type="text" ng-model="search" class="form-control col-3 col-md-2" placeholder="Rechercher" >
             <label for="places" class="sr-only">Recherche</label>
-            <input id="places" type="number" ng-model="places" class="form-control col-1" placeholder="Places" ng-keypress="clear(places)">
+            <input id="places" type="number" ng-model="places" class="form-control" placeholder="Places" ng-keypress="clear(places)">
+        </div>
+        <div class="future-row">
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-outline-primary" ng-model="tv"  ng-click="checkbox('tv')">
                 <input type="checkbox" checked autocomplete="off">
@@ -18,12 +21,14 @@
         </div>
 
 
-        <select ng-init="selectval = az" class="form-control" value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
+
+        <select ng-init="selectval = az" class="form-control " value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
             <option value="az" selected="selected">A-Z</option>
             <option value="za">Z-A</option>
             <option value="pu">Places &uarr;</option>
             <option value="pd">Places &darr;</option>
         </select>
+        </div>
     </form>
     <div class="rooms row justify-content-left">
         <div class="room col-lg-2 col-md-3 col-sm-5" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter() | orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit(rooms.indexOf(room))">

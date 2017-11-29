@@ -187,6 +187,10 @@ body {
     padding: 8px 20px;
 }
 
+.future-row {
+    display: inline;
+}
+
 .row.form-inline {
     border-bottom: 1px solid grey;
 }
@@ -196,6 +200,11 @@ body {
     border-bottom: 1px solid #ececec !important;
     border-radius: 0px;
     box-shadow: none !important;
+}
+
+.form-inline #places{
+
+    width: 90px;
 }
 
 .form-inline .btn-group.first .btn {
@@ -212,7 +221,7 @@ body {
     float: right;
 }
 .form-inline #selecttri {
-    width: 165px;
+    width: 110px;
     border-radius: 0px;
     border: none;
     border-bottom: 1px solid #ececec;
@@ -487,10 +496,45 @@ body {
 
 }
 
+
+@media screen and (max-width: 768px) {
+
+}
 @media screen and (max-width: 720px) {
 
 }
-@media screen and (max-width: 540px) {
 
+@media screen and (max-width: 590px) {
+    .form-control {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 540px) {
+    #search {
+        min-width: 35%;
+    }
+    .form-inline #places {
+        float: right;
+    }
+    .form-inline.block #selecttri {
+        float: left;
+    }
+    .future-row {
+        display: inline-block;
+        width: 100%;
+        margin: 5px 0px 0px;
+    }
+    .row.form-inline .btn {
+        margin-bottom: 0px
+    }
+    .row.form-inline {
+        padding: 0px 20px;
+    }
+}
+@media screen and (max-width: 355px) {
+
+    #search {
+        min-width: 110px !important;
+    }
 }
 
