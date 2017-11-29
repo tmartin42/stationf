@@ -57,8 +57,7 @@ angular.module('myApp.view1', ['ngRoute'])
     $('#datetimepicker1').datetimepicker({
         format: 'YYYY-MM-DD HH:mm',
         stepping: 30,
-        minDate: moment(),
-        debug: true
+        minDate: moment()
     });
 
 

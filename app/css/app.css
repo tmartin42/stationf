@@ -291,10 +291,10 @@ body {
     font-family: "FabrikatBold";
     background: url(/img/room_low.jpg);
     background-size: contain;
-    transition: 0.3s;
     cursor: pointer;
     padding: 0;
     margin: 1.666667% 1.666667%;
+    transition: color 0.3s;
 }
 
 
@@ -311,7 +311,7 @@ body {
 
 .room:hover {
     color: #000;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .room:hover:before {
@@ -417,7 +417,7 @@ body {
 .modal-body {
     border: none;
     max-height: 39vh;
-    min-height: 250px;
+    min-height: 220px;
     overflow-x: hidden;
     overflow-y: auto;
     font-family: "Lekton";
@@ -529,12 +529,15 @@ body {
 
 @media screen and (max-width: 1200px) {
     .room .description {
-        max-height: 6vw;
+        max-height: 70px;
     }
 }
 @media screen and (max-width: 992px) {
     .room {
         margin: 4.15%;
+    }
+    .room .description {
+        max-height: 90px;
     }
 }
 @media screen and (max-width: 960px) {
@@ -544,6 +547,9 @@ body {
 
 @media screen and (max-width: 768px) {
 
+    .room .description {
+        max-height: 110px;
+    }
 }
 @media screen and (max-width: 720px) {
 
@@ -560,6 +566,9 @@ body {
 
     .menu a:not(.dropdown-item) {
         display: none;
+    }
+    .room .description {
+        max-height: 17.5vw;
     }
 }
 @media screen and (max-width: 540px) {
@@ -603,6 +612,10 @@ body {
 
     .room:nth-child(2n) {
         margin-left: 0px;
+    }
+
+    .room .description {
+        max-height: 17.5vw;
     }
 }
 @media screen and (max-width: 355px) {
