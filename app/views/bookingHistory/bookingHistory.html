@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="future-row">
-            <select class="form-control" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
+            <select class="form-control" id="selecttri" ng-init="selectval = 'dd'" ng-change="changeOrder(selectval)" ng-model="selectval">
                 <option value="az" selected="selected">A-Z</option>
                 <option value="za">Z-A</option>
                 <option value="pu">Places &uarr;</option>

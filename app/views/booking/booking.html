@@ -5,7 +5,7 @@
             <label for="search" class="sr-only">Recherche</label>
             <input id="search" type="text" ng-model="search" class="form-control col-3 col-md-2" placeholder="Rechercher" >
             <label for="places" class="sr-only">Recherche</label>
-            <input id="places" type="number" ng-model="places" class="form-control" placeholder="Places" ng-keypress="clear(places)">
+            <input id="places" type="number" ng-model="places" class="form-control" min="0" placeholder="Places" ng-keypress="clear(places)">
         </div>
         <div class="future-row">
             <div class="btn-group" data-toggle="buttons">
@@ -20,8 +20,8 @@
                     <i class="fa fa-video-camera" aria-hidden="true"></i>
                 </label>
             </div>
-            <select ng-init="selectval = az" class="form-control " value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
-                <option value="az" selected="selected">A-Z</option>
+            <select placeholder="A-Z" ng-init="selectval = 'az'" class="form-control " value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
+                <option value="az" selected>A-Z</option>
                 <option value="za">Z-A</option>
                 <option value="pu">Places &uarr;</option>
                 <option value="pd">Places &darr;</option>
