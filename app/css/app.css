@@ -442,11 +442,15 @@ body {
     transition: 0.3s;
     left: 0;
     right: 0;
+    pointer-events: none;
+    touch-action: none;
 }
 
 .modal-content.selected {
     opacity: 1;
     z-index: 4;
+    pointer-events: auto;
+    touch-action: auto;
     transition: 0.3s 0.3s;
 }
 

@@ -17,6 +17,7 @@ angular.module('myApp.booking', ['ngRoute'])
     $scope.why = '';
     $scope.login = '';
 
+    $('.modal-backdrop').remove();
     $('.menu a').removeClass('active');
     $('.menu a[href="#!/booking"]').addClass('active');
 
@@ -176,7 +177,8 @@ angular.module('myApp.booking', ['ngRoute'])
     };
 
     $scope.activateBooking = function() {
-        $('.modal-content').toggleClass('selected');
+        $('.modal-content').removeClass('selected');
+        $('.modal-content.content-form').addClass('selected');
     };
 
     $scope.openSearch = function () {

@@ -11,6 +11,7 @@ angular.module('myApp.bookingHistory', ['ngRoute'])
 
 .controller('BookingHistoryCtrl', ['$scope', '$http', function($scope, $http) {
 
+    $('.modal-backdrop').remove();
     $http.get('/data/bookings.json').success(function(data) {
         $scope.rooms = data.rooms;
     });
