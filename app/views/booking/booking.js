@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.booking', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/booking', {
+    templateUrl: '/views/booking/booking.html',
+    controller: 'BookingCtrl'
   });
 }])
 
-.controller('View1Ctrl', ['$scope', '$http', function($scope, $http) {
+.controller('BookingCtrl', ['$scope', '$http', function($scope, $http) {
 
 
   $scope.rooms = null;
@@ -20,7 +20,7 @@ angular.module('myApp.view1', ['ngRoute'])
     $scope.login = '';
 
   $('.menu a').removeClass('active');
-  $('.menu a[href="#!/view1"]').addClass('active');
+  $('.menu a[href="#!/booking"]').addClass('active');
 
   $http.get('/data/rooms.json').success(function(data) {
       $scope.rooms = data.rooms;

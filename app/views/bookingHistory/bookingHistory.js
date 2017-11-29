@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.bookingHistory', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+  $routeProvider.when('/bookingHistory', {
+    templateUrl: '/views/bookingHistory/bookingHistory.html',
+    controller: 'BookingHistoryCtrl'
   });
 }])
 
-.controller('View2Ctrl', ['$scope', '$http', function($scope, $http) {
+.controller('BookingHistoryCtrl', ['$scope', '$http', function($scope, $http) {
 
     $http.get('/data/bookings.json').success(function(data) {
         $scope.rooms = data.rooms;
@@ -18,7 +18,7 @@ angular.module('myApp.view2', ['ngRoute'])
 
 
     $('.menu a').removeClass('active');
-    $('.menu a[href="#!/view2"]').addClass('active');
+    $('.menu a[href="#!/bookingHistory"]').addClass('active');
 
     $('#datetimepicker1').datetimepicker({
         format: 'YYYY-MM-DD',
