@@ -32,11 +32,21 @@ angular.module('myApp.view2', ['ngRoute'])
         $scope.$apply();
     })
 
-    $scope.datefilter = function(prop, val){
+    $scope.datefilter = function(from, to, val){
         return function(item){
-            if (val == undefined || !moment(val).isValid())
+            console.log(item[from]);
+            console.log(item[to]);
+            console.log(val);
+            console.log(moment(val).isBetween(moment(item[from]), moment(item[to]),'day', '[]'))
+            if (val == undefined || !moment(val).isValid()) {
+                console.log('val invalides');
                 return true;
-            return moment(item[prop]).isSame(val, 'day');
+            }
+            if (!moment(item[from]).isValid() || !moment(item[to]).isValid()) {
+                console.log('dates invalides');
+                return false;
+            }
+            return moment(val).isBetween(moment(item[from]), moment(item[to]),'day', '[]');
         }
     };
 
