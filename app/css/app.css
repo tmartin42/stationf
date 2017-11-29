@@ -598,6 +598,11 @@ body {
     .room {
         margin: 2.525% 4.15%;
         max-width: 43.75%;
+        flex: 100%;
+    }
+
+    .room:nth-child(2n) {
+        margin-left: 0px;
     }
 }
 @media screen and (max-width: 355px) {
