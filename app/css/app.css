@@ -472,6 +472,7 @@ body {
 
 .content-form .modal-body {
     min-height: auto;
+    max-height: none;
     overflow: visible;
 }
 
