@@ -20,7 +20,7 @@
         </select>
     </form>
     <div class="rooms row justify-content-left">
-        <div class="room col-2" ng-repeat="room in filteredrooms = (rooms | filter  :{'name': search} | filter: datefilter('booked', date)| orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
+        <div class="room col-2" ng-repeat="room in filteredrooms = (rooms | filter  :{'name': search} | filter: datefilter('booked', date)| orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit(rooms.indexOf(room))">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.booked | date : "dd/MM/yyyy HH:mm"}}</p>
 
