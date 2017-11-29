@@ -28,6 +28,11 @@ angular.module('myApp.booking', ['ngRoute'])
         $scope.selected = $scope.rooms[index];
     };
 
+    $('#modal').on('hide.bs.modal', function (e) {
+        $('.modal-content').addClass('selected');
+        $('.modal-content.content-form').removeClass('selected');
+    });
+
     $scope.greaterThan = function(prop, val){
         return function(item){
             return Number(item[prop]) >= Number(val);
@@ -122,7 +127,7 @@ angular.module('myApp.booking', ['ngRoute'])
         var dataLogin = $scope.login;
         var dataWhy = $scope.why;
 
-        $('#exampleModal').modal('hide');
+        $('#modal').modal('hide');
 
         if (moment(dataStart).isValid() && moment(dataEnd).isValid()) {
 
