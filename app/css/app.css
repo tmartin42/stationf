@@ -54,7 +54,7 @@ body {
     margin-right: auto;
 }
 
-.menu .btn {
+.menu #thebutton {
     width: 180px;
     line-height: 40px;
     margin-top: 25px;
@@ -119,7 +119,7 @@ body {
     transition: 0.1s ease;
 }
 
-.menu a {
+.menu a:not(.dropdown-item) {
     opacity: 0;
     pointer-events: none;
     z-index: 4243;
@@ -147,6 +147,52 @@ body {
     background: #e5f2f2;
 }
 
+
+.menu .dropdown {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 3px;
+    font-size: 45px;
+    color: black;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.menu .btn-secondary:not([disabled]):not(.disabled).active, .menu .btn-secondary:not([disabled]):not(.disabled):active, .show>.menu .btn-secondary.dropdown-toggle {
+    border: none;
+    color: black;
+    box-shadow: none;
+    background: #E5F2F2;
+}
+
+
+.menu .dropdown .btn {
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    line-height: 15px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px;
+}
+
+.menu .dropdown-menu {
+    border-radius: 0px;
+    z-index: 4245;
+}
+
+.menu a.dropdown-item {
+    width: 190px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    color: black;
+    margin: 0px;
+}
+
 .menu.minimized {
     width: 100%;
     height: 70px;
@@ -169,7 +215,7 @@ body {
     transition: 0.7s;
 }
 
-.menu.minimized .btn {
+.menu.minimized #thebutton {
     opacity: 0;
     pointer-events: none;
 }
@@ -507,6 +553,14 @@ body {
 @media screen and (max-width: 590px) {
     .form-control {
         display: inline-block;
+    }
+
+    .menu .dropdown {
+        display: inline-block;
+    }
+
+    .menu a:not(.dropdown-item) {
+        display: none;
     }
 }
 @media screen and (max-width: 540px) {

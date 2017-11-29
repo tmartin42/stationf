@@ -15,6 +15,6 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 
     $scope.transition = function(){
         $('.menu').addClass('minimized');
-        $('.menu .btn').addClass('dispnoneimp');
+        $('.menu #thebutton').addClass('dispnoneimp');
     }
 }]);
