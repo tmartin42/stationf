@@ -1,29 +1,27 @@
 <div class="container">
     <form class="row form-inline justify-content-start block">
         <div class="future-row">
-        <label for="search" class="sr-only">Recherche</label>
-        <input id="search" type="text" ng-model="search" class="form-control col-3 col-md-2" placeholder="Rechercher" >
-
-
-        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-            <input id="date" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
-            <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                                <span class="fa fa-calendar"></span>
-            </span>
+            <label for="search" class="sr-only">Recherche</label>
+            <input id="search" type="text" ng-model="search" class="form-control col-3 col-md-2" placeholder="Rechercher" >
+            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                <input id="date" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
+                <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                    <span class="fa fa-calendar"></span>
+                </span>
+            </div>
         </div>
-        </div>
-
         <div class="future-row">
-        <select class="form-control" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
-            <option value="az" selected="selected">A-Z</option>
-            <option value="za">Z-A</option>
-            <option value="pu">Places &uarr;</option>
-            <option value="pd">Places &darr;</option>
-            <option value="du">Dates &uarr;</option>
-            <option value="dd">Dates &darr;</option>
-        </select>
+            <select class="form-control" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
+                <option value="az" selected="selected">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="pu">Places &uarr;</option>
+                <option value="pd">Places &darr;</option>
+                <option value="du">Dates &uarr;</option>
+                <option value="dd">Dates &darr;</option>
+            </select>
         </div>
     </form>
+
     <div class="rooms row justify-content-left">
         <div class="searchopener" ng-click="openSearch()">
             <i class="fa fa-search" aria-hidden="true"></i>
@@ -32,15 +30,13 @@
         <div class="room col-lg-2 col-md-3 col-sm-5 col-5" ng-repeat="room in filteredrooms = (rooms | filter  :{'name': search} | filter: datefilter('booked', 'to', date)| orderBy: order:rev)"  data-toggle="modal" data-target="#exampleModal">
             <p class="name">{{room.name}}</p>
             <p class="description">Du {{room.booked | date : "dd/MM/yyyy HH:mm"}} au {{room.to | date : "dd/MM/yyyy HH:mm"}} par {{room.by}} pour {{room.why}}</p>
-
             <p class="places">{{room.capacity}} <i class="fa fa-users" aria-hidden="true"></i></p>
 
             <div class="equipements">
-                <i ng-repeat="equipement in room.equipements" class="equipement fa fa-{{equipement.name}}">
-                </i>
+                <i ng-repeat="equipement in room.equipements" class="equipement fa fa-{{equipement.name}}"></i>
             </div>
         </div>
-        <div class="empty" ng-show="!filteredrooms.length">Aucunes salles ne sont presentes ou ne correspond a vos criteres.</div>
+        <div class="empty" ng-show="!filteredrooms.length">Aucunes salles ne sont présentes ou ne correspond a vos critères.</div>
     </div>
 
 </div>

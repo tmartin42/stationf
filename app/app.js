@@ -4,17 +4,18 @@
 var app = angular.module('myApp', [
     'ngRoute',
     'myApp.booking',
-    'myApp.bookingHistory',
-    'myApp.version'
+    'myApp.bookingHistory'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
 
+    $locationProvider.hashPrefix('!');
     $routeProvider.otherwise({redirectTo: '/booking'});
+
 }]).controller('appController', ['$scope', function($scope) {
 
     $scope.transition = function(){
         $('.menu').addClass('minimized');
         $('.menu #thebutton').addClass('dispnoneimp');
     }
+
 }]);

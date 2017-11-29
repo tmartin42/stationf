@@ -1,4 +1,5 @@
 <div class="container">
+
     <form class="row form-inline block">
         <div class="future-row">
             <label for="search" class="sr-only">Recherche</label>
@@ -7,29 +8,27 @@
             <input id="places" type="number" ng-model="places" class="form-control" placeholder="Places" ng-keypress="clear(places)">
         </div>
         <div class="future-row">
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-outline-primary" ng-model="tv"  ng-click="checkbox('tv')">
-                <input type="checkbox" checked autocomplete="off">
-                <i class="fa fa-television" aria-hidden="true"></i>
-            </label>
-        </div>
-            <div class="btn-group first" data-toggle="buttons">
-            <label class="btn btn-outline-primary"  ng-model="proj" ng-click="checkbox('proj')">
-                <input type="checkbox" autocomplete="off">
-                <i class="fa fa-video-camera" aria-hidden="true"></i>
-            </label>
-        </div>
-
-
-
-        <select ng-init="selectval = az" class="form-control " value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
-            <option value="az" selected="selected">A-Z</option>
-            <option value="za">Z-A</option>
-            <option value="pu">Places &uarr;</option>
-            <option value="pd">Places &darr;</option>
-        </select>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-outline-primary" ng-model="tv"  ng-click="checkbox('tv')">
+                    <input type="checkbox" checked autocomplete="off">
+                    <i class="fa fa-television" aria-hidden="true"></i>
+                </label>
+            </div>
+                <div class="btn-group first" data-toggle="buttons">
+                <label class="btn btn-outline-primary"  ng-model="proj" ng-click="checkbox('proj')">
+                    <input type="checkbox" autocomplete="off">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                </label>
+            </div>
+            <select ng-init="selectval = az" class="form-control " value="az" id="selecttri" ng-change="changeOrder(selectval)" ng-model="selectval">
+                <option value="az" selected="selected">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="pu">Places &uarr;</option>
+                <option value="pd">Places &darr;</option>
+            </select>
         </div>
     </form>
+
     <div class="rooms row justify-content-left">
         <div class="searchopener" ng-click="openSearch()">
             <i class="fa fa-search" aria-hidden="true"></i>
@@ -38,15 +37,12 @@
         <div class="room col-lg-2 col-md-3 col-sm-5 col-5" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter() | orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit(rooms.indexOf(room))">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
-
             <p class="places">{{room.capacity}} <i class="fa fa-users" aria-hidden="true"></i></p>
-
             <div class="equipements">
-            <i ng-repeat="equipement in room.equipements" class="equipement fa fa-{{equipement.name}}">
-            </i>
+                <i ng-repeat="equipement in room.equipements" class="equipement fa fa-{{equipement.name}}"></i>
             </div>
         </div>
-        <div class="empty" ng-show="!filteredrooms.length">Aucunes salles ne sont presentes ou ne correspond a vos criteres.</div>
+        <div class="empty" ng-show="!filteredrooms.length">Aucunes salles ne sont présentes ou ne correspond a vos critères.</div>
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,7 +53,6 @@
             <div class="modal-content selected">
                 <div class="modal-body">
                     <div>{{selected.description}}</div>
-
                 </div>
                 <div class="modal-footer more-infos">
                     <div class="places">{{selected.capacity}} <i class="fa fa-users" aria-hidden="true"></i></div>
@@ -66,52 +61,47 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-
-
-                    <button type="button" class="btn btn-primary" ng-click="activateBooking()">Reserver</button>
+                    <button type="button" class="btn btn-primary" ng-click="activateBooking()">Réserver</button>
                 </div>
             </div>
             <div class="modal-content content-form">
-
                 <div class="modal-body modal-form">
-
                     <div class="form-row">
                         <div class="col col-sm-6 col-12">
                             <input type="text" class="form-control" placeholder="Login" ng-model="login">
                         </div>
                         <div class="col col-sm-6 col-12">
-                            <input type="text" class="form-control" placeholder="Raison" ng-model="why">
+                            <input type="text" class="form-control" placeholder="Sujet" ng-model="why">
                         </div>
                     </div>
                     <form class="justify-content-center align-items-center">
                         <div class="form-row">
                             <div class="col">
-                            <div class="input-group  date" id="datetimepicker1" data-target-input="#dateStart">
-                                <input id="dateStart" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
-                                <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                                    <span class="fa fa-calendar"></span>
-                                </span>
-                            </div>
-                            </div>
-                                <div class="col ">
-                                    <div class="input-group date " id="datetimepicker2" data-target-input="#dateEnd">
-                                        <input id="dateEnd" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker2"/>
-                                        <span class="input-group-addon" data-target="#datetimepicker2" data-toggle="datetimepicker">
-                                            <span class="fa fa-calendar"></span>
-                                        </span>
-                                    </div>
+                                <div class="input-group  date" id="datetimepicker1" data-target-input="#dateStart">
+                                    <input id="dateStart" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
+                                    <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
                                 </div>
+                            </div>
+                            <div class="col ">
+                                <div class="input-group date " id="datetimepicker2" data-target-input="#dateEnd">
+                                    <input id="dateEnd" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker2"/>
+                                    <span class="input-group-addon" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-
-
-                        <button type="button" class="btn btn-primary" ng-click="submitBooking(selected)">Confirmer</button>
+                    <button type="button" class="btn btn-primary" ng-click="submitBooking(selected)">Confirmer</button>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 <div class="message dispnoneimp">
     {{message}}

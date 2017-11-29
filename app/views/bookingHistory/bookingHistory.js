@@ -13,9 +13,7 @@ angular.module('myApp.bookingHistory', ['ngRoute'])
 
     $http.get('/data/bookings.json').success(function(data) {
         $scope.rooms = data.rooms;
-
     });
-
 
     $('.menu a').removeClass('active');
     $('.menu a[href="#!/bookingHistory"]').addClass('active');
@@ -25,19 +23,14 @@ angular.module('myApp.bookingHistory', ['ngRoute'])
         stepping: 30
     });
 
-
     $('#datetimepicker1').on('change.datetimepicker',function(){
         $scope.date = $('#date').val();
         $('#date').trigger('input');
         $scope.$apply();
-    })
+    });
 
     $scope.datefilter = function(from, to, val){
         return function(item){
-            console.log(item[from]);
-            console.log(item[to]);
-            console.log(val);
-            console.log(moment(val).isBetween(moment(item[from]), moment(item[to]),'day', '[]'))
             if (val == undefined || !moment(val).isValid()) {
                 console.log('val invalides');
                 return true;
@@ -52,7 +45,6 @@ angular.module('myApp.bookingHistory', ['ngRoute'])
 
     $scope.rev = false;
     $scope.order = 'booked';
-
     $scope.changeOrder= function (val) {
         if (val == 'az'){
             $scope.rev = false;
@@ -73,9 +65,9 @@ angular.module('myApp.bookingHistory', ['ngRoute'])
             $scope.rev = true;
             $scope.order = "booked";
         }
-    }
+    };
 
     $scope.openSearch = function () {
         $('.row.form-inline, .rooms').toggleClass('opened');
-    }
+    };
 }]);
