@@ -248,6 +248,13 @@ body {
     box-shadow: none !important;
 }
 
+.form-inline #datetimepicker1 {
+    width: 150px;
+    margin: 0px 20px;
+    display: inline-flex;
+    vertical-align: bottom;
+}
+
 .form-inline #places{
 
     width: 90px;
@@ -572,10 +579,13 @@ body {
     }
 }
 @media screen and (max-width: 540px) {
+    .form-inline #datetimepicker1 {
+        margin: 0px;
+    }
     #search {
         min-width: 35%;
     }
-    .form-inline #places {
+    .form-inline #places, .form-inline #datetimepicker1 {
         float: right;
     }
     .form-inline.block #selecttri {
