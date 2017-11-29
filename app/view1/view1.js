@@ -16,6 +16,8 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.places = '';
   $scope.tv = false;
   $scope.proj = false;
+    $scope.why = '';
+    $scope.login = '';
 
   $('.menu a').removeClass('active');
   $('.menu a[href="#!/view1"]').addClass('active');
@@ -50,11 +52,16 @@ angular.module('myApp.view1', ['ngRoute'])
             return ok;
         }
     };
-
+false
     $scope.showData = function() {
       console.log($scope.rooms);
     };
     $('#datetimepicker1').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm',
+        stepping: 30,
+        minDate: moment()
+    });
+    $('#datetimepicker2').datetimepicker({
         format: 'YYYY-MM-DD HH:mm',
         stepping: 30,
         minDate: moment()
@@ -118,26 +125,34 @@ angular.module('myApp.view1', ['ngRoute'])
 
     $scope.submitBooking = function(room) {
 
-        var data = $('#date').val();
+        var dataStart = $('#dateStart').val();
+        var dataEnd = $('#dateEnd').val();
         var dataRoomName = room.name;
-        console.log("Rdv le: ", data, " a la ", dataRoomName);
-
+        var dataLogin = $scope.login;
+        var dataWhy = $scope.why;
 
         $('#exampleModal').modal('hide');
 
-        if (moment(data).isValid()) {
+        if (moment(dataStart).isValid() && moment(dataEnd).isValid()) {
 
-            if (moment(data).isBefore(moment())) {
+            if (moment(dataStart).isBefore(moment())) {
                 $scope.message = "Bien essaye ! Mais non tu ne peux pas etre dans le passe";
                 $('.logo').addClass('outatime');
+                $scope.error();
+            } else if (moment(dataStart).isAfter(moment(dataEnd))) {
+                $scope.message = "Erreur: Date de depart apres date de fin";
                 $scope.error();
             } else if (!$scope.contain(dataRoomName)) {
                 $scope.message = "Erreur: cette salle n'existe pas";
                 $scope.error();
+            } else if (!dataLogin.length || !dataWhy.length) {
+                $scope.message = "Erreur: informations incompletes";
+                $scope.error();
             } else {
                 //normalement ajax ici avec ceci dans le cas de succes. il faut penser au cas ou l'AJAX renvoie une erreur
 
-                $scope.message = "Prise de rendez-vous reussie ! Elle sera le " + moment(data).format("DD/MM/YYYY[ a ]HH[h]mm").toString() + " dans la " + dataRoomName;
+                $scope.message = "Prise de rendez-vous reussie ! Elle sera du " + moment(dataStart).format("DD/MM/YYYY[ a ]HH[h]mm").toString() + " au "
+                    + moment(dataEnd).format("DD/MM/YYYY[ a ]HH[h]mm").toString() + " dans la " + dataRoomName;
                 $scope.success();
             }
 
@@ -166,9 +181,12 @@ angular.module('myApp.view1', ['ngRoute'])
         }
     }
 
+    $scope.activateBooking = function() {
+        $('.modal-content').toggleClass('selected');
+    };
 
     $scope.openSearch = function () {
         $('.row.form-inline, .rooms').toggleClass('opened');
-    }
+    };
 
 }]);

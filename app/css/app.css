@@ -436,6 +436,18 @@ body {
     border-radius: 0px;
     border: none;
     font-family: "FabrikatMedium";
+    opacity: 0;
+    z-index: 3;
+    position: absolute;
+    transition: 0.3s;
+    left: 0;
+    right: 0;
+}
+
+.modal-content.selected {
+    opacity: 1;
+    z-index: 4;
+    transition: 0.3s 0.3s;
 }
 
 .modal-header {
@@ -446,6 +458,7 @@ body {
     color: white;
     background-color: #60697F;
     border-radius: 0px;
+    width: 100%;
 }
 
 .modal-body {
@@ -457,6 +470,15 @@ body {
     font-family: "Lekton";
 }
 
+.content-form .modal-body {
+    min-height: auto;
+    overflow: visible;
+}
+
+.content-form .form-row {
+    padding: 10px 0px;
+}
+
 .modal-footer {
     border: none;
     padding: 0px 10px 15px;
@@ -465,7 +487,7 @@ body {
 }
 
 .modal-footer .btn {
-/*   width: 110px;*/
+   width: 110px;
 }
 
 .more-infos {

@@ -51,10 +51,10 @@
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">{{selected.name}}</h5>
                 </div>
+            <div class="modal-content selected">
                 <div class="modal-body">
                     <div>{{selected.description}}</div>
 
@@ -66,16 +66,48 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <form class="form-inline justify-content-center align-items-center">
 
-                        <div class="input-group date col-7" id="datetimepicker1" data-target-input="nearest">
-                            <input id="date" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
-                            <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                                <span class="fa fa-calendar"></span>
-                            </span>
+
+                    <button type="button" class="btn btn-primary" ng-click="activateBooking()">Reserver</button>
+                </div>
+            </div>
+            <div class="modal-content content-form">
+
+                <div class="modal-body modal-form">
+
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Login" ng-model="login">
                         </div>
-                    <button type="button" class="btn btn-primary" ng-click="submitBooking(selected)">Reserver</button>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Raison" ng-model="why">
+                        </div>
+                    </div>
+                    <form class="justify-content-center align-items-center">
+                        <div class="form-row">
+                            <div class="col">
+                            <div class="input-group  date" id="datetimepicker1" data-target-input="nearest">
+                                <input id="dateStart" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker1"/>
+                                <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                    <span class="fa fa-calendar"></span>
+                                </span>
+                            </div>
+                            </div>
+                                <div class="col">
+                                    <div class="input-group date " id="datetimepicker2" data-target-input="nearest">
+                                        <input id="dateEnd" type="text" class="form-control datetimepicker-input" ng-model="datepicker"  data-target="#datetimepicker2"/>
+                                        <span class="input-group-addon" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                        </div>
                     </form>
+                </div>
+                <div class="modal-footer">
+
+
+                        <button type="button" class="btn btn-primary" ng-click="submitBooking(selected)">Confirmer</button>
                 </div>
             </div>
         </div>
