@@ -394,7 +394,7 @@ body {
 
 
 .modal {
-    top: 10%;
+    top: 15%;
     margin: 0 auto;
 }
 
@@ -478,12 +478,11 @@ body {
     border: 2px solid pink;
     bottom: -70px;
     right: 20px;
-    white-space: nowrap;
     text-overflow: ellipsis;
     font-family: "Lekton";
     padding: 20px 30px;
     line-height: 14px;
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 40px);
     pointer-events: none;
     opacity: 0;
     color: white;
@@ -583,6 +582,22 @@ body {
     }
     .row.form-inline {
         padding: 0px 20px;
+    }
+    .main {
+        padding-top: 80px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .main {
+        padding: 0px;
+        padding-top: 80px;
+    }
+    .rooms {
+      padding: 8px 0px;
+    }
+    .room {
+        margin: 2.525% 4.15%;
+        max-width: 43.75%;
     }
 }
 @media screen and (max-width: 355px) {

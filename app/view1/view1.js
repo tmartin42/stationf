@@ -124,7 +124,7 @@ angular.module('myApp.view1', ['ngRoute'])
         console.log("Rdv le: ", data, " a la ", dataRoomName);
 
 
-        //$('#exampleModal').modal('hide');
+        $('#exampleModal').modal('hide');
 
         if (moment(data).isValid()) {
 
