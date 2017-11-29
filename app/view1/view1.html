@@ -31,6 +31,10 @@
         </div>
     </form>
     <div class="rooms row justify-content-left">
+        <div class="searchopener" ng-click="openSearch()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
         <div class="room col-lg-2 col-md-3 col-sm-5 col-5" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter() | orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit(rooms.indexOf(room))">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>

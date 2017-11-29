@@ -167,5 +167,8 @@ angular.module('myApp.view1', ['ngRoute'])
     }
 
 
+    $scope.openSearch = function () {
+        $('.row.form-inline, .rooms').toggleClass('opened');
+    }
 
 }]);

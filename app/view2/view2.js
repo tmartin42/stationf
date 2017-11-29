@@ -64,4 +64,8 @@ angular.module('myApp.view2', ['ngRoute'])
             $scope.order = "booked";
         }
     }
+
+    $scope.openSearch = function () {
+        $('.row.form-inline, .rooms').toggleClass('opened');
+    }
 }]);
