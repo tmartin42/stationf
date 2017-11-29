@@ -32,11 +32,9 @@ angular.module('myApp.bookingHistory', ['ngRoute'])
     $scope.datefilter = function(from, to, val){
         return function(item){
             if (val == undefined || !moment(val).isValid()) {
-                console.log('val invalides');
                 return true;
             }
             if (!moment(item[from]).isValid() || !moment(item[to]).isValid()) {
-                console.log('dates invalides');
                 return false;
             }
             return moment(val).isBetween(moment(item[from]), moment(item[to]),'day', '[]');
