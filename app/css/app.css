@@ -700,69 +700,136 @@ body {
 
 
 
-@media screen and (max-width: 540px) {
-    @media screen and (max-height: 675px) {
+@media screen and (max-height: 675px) {
 
-        .menu.minimized {
-            height: 40px;
-        }
+    .form-control {
+        display: inline-block;
+    }
 
-        .menu.minimized .logo {
-            width: 110px;
-        }
+    .menu .dropdown {
+        display: inline-block;
+    }
 
-        .menu.minimized img {
-            width: 50px;
-            height: 40px;
-        }
+    .menu a:not(.dropdown-item) {
+        display: none;
+    }
+    .room .description {
+        max-height: 17.5vw;
+    }
 
-        .menu .dropdown {
-            top: 1px;
-        }
+    .content-form .col-12 {
+        padding: 5px 0px;
+    }
 
-        .menu .dropdown .btn {
-            vertical-align: top;
-        }
+    .form-inline #datetimepicker1 {
+        margin: 0px;
+    }
+    #search {
+        min-width: 35%;
+    }
+    .form-inline #places, .form-inline #datetimepicker1 {
+        float: right;
+    }
+    .form-inline.block #selecttri {
+        float: left;
+    }
+    .future-row {
+        display: inline-block;
+        width: 100%;
+        margin: 5px 0px 0px;
+    }
+    .row.form-inline .btn {
+        margin-bottom: 0px
+    }
+    .row.form-inline {
+        padding: 0px 20px;
+    }
+    .main {
+        padding-top: 80px;
+    }
 
-        .main {
-            padding-top: 39px;
-        }
+    .menu.minimized {
+        height: 40px;
+    }
 
-        .row.form-inline {
-            margin-top: -93px;
-            transition: 0.3s;
-        }
+    .menu.minimized .logo {
+        width: 110px;
+    }
 
-        .rooms {
-            max-height: calc(100vh - 40px);
-            transition: 0.3s;
-        }
+    .menu.minimized img {
+        width: 50px;
+        height: 40px;
+    }
 
-        .searchopener {
-            display: block;
-            transition: 0.3s;
-        }
+    .menu .dropdown {
+        top: 1px;
+    }
 
-        .row.form-inline.opened {
-            height: 95px;
-            margin-top: 0px;
-        }
+    .menu .dropdown .btn {
+        vertical-align: top;
+    }
 
-        .rooms.opened {
-            max-height: calc(100vh - 134px);
-        }
+    .main {
+        padding: 0px;
+        padding-top: 80px;
+    }
+    .rooms {
+        padding: 8px 0px;
+    }
+    .room {
+        margin: 2.525% 4.15%;
+        max-width: 43.75%;
+        flex: 100%;
+    }
 
-        .rooms.opened .searchopener {
-            top: 134px;
-            transition: 0.3s;
-        }
+    .room:nth-child(2n + 1) {
+        margin-left: 0px;
+    }
 
-        .rooms.opened .searchopener .fa-search {
-            display: none;
-        }
+    .room .description {
+        max-height: 17.5vw;
+    }
 
-        .rooms.opened .searchopener .fa-times {
-            display: inline-block;
-        }
+    .main {
+        padding-top: 39px;
+    }
+
+    .row.form-inline {
+        margin-top: -93px;
+        transition: 0.3s;
+    }
+    #search {
+        min-width: 110px !important;
+    }
+    .rooms {
+        max-height: calc(100vh - 40px);
+        transition: 0.3s;
+    }
+
+    .searchopener {
+        display: block;
+        transition: 0.3s;
+    }
+
+    .row.form-inline.opened {
+        height: 95px;
+        margin-top: 0px;
+    }
+
+    .rooms.opened {
+        max-height: calc(100vh - 134px);
+    }
+
+    .rooms.opened .searchopener {
+        top: 134px;
+        transition: 0.3s;
+    }
+
+    .rooms.opened .searchopener .fa-search {
+        display: none;
+    }
+
+    .rooms.opened .searchopener .fa-times {
+        display: inline-block;
     }
 }
