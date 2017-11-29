@@ -628,6 +628,11 @@ body {
     .room .description {
         max-height: 17.5vw;
     }
+
+    .content-form .col-12 {
+        padding: 5px 0px;
+    }
+
 }
 @media screen and (max-width: 540px) {
     .form-inline #datetimepicker1 {

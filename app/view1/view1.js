@@ -59,12 +59,12 @@ false
     $('#datetimepicker1').datetimepicker({
         format: 'YYYY-MM-DD HH:mm',
         stepping: 30,
-        minDate: moment()
+        minDate: moment(),
     });
     $('#datetimepicker2').datetimepicker({
         format: 'YYYY-MM-DD HH:mm',
         stepping: 30,
-        minDate: moment()
+        minDate: moment(),
     });
 
 
@@ -139,7 +139,7 @@ false
                 $scope.message = "Bien essaye ! Mais non tu ne peux pas etre dans le passe";
                 $('.logo').addClass('outatime');
                 $scope.error();
-            } else if (moment(dataStart).isAfter(moment(dataEnd))) {
+            } else if (moment(dataStart).isSameOrAfter(moment(dataEnd))) {
                 $scope.message = "Erreur: Date de depart apres date de fin";
                 $scope.error();
             } else if (!$scope.contain(dataRoomName)) {
