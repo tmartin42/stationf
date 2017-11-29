@@ -123,6 +123,7 @@ body {
     opacity: 0;
     pointer-events: none;
     z-index: 4243;
+    max-height: 100%;
     padding: 0px 35px;
     text-align: center;
     position: relative;
@@ -424,8 +425,11 @@ body {
 
 
 .modal {
-    top: 15%;
     margin: 0 auto;
+}
+
+.modal-dialog {
+    top: 15%;
 }
 
 .modal-content {
@@ -631,65 +635,7 @@ body {
         padding-top: 80px;
     }
 
-    @media screen and (max-height: 675px) {
 
-        .menu.minimized{
-            height: 40px;
-        }
-        .menu.minimized .logo {
-            width: 110px;
-        }
-        .menu.minimized img {
-            width: 50px;
-            height: 40px;
-        }
-        .menu .dropdown {
-            top: 1px;
-        }
-        .menu .dropdown .btn {
-            vertical-align: top;
-        }
-
-        .main {
-            padding-top: 39px;
-        }
-
-        .row.form-inline {
-            margin-top: -93px;
-            transition: 0.3s;
-        }
-
-        .rooms {
-            max-height: calc(100vh - 56px);
-            transition: 0.3s;
-        }
-
-        .searchopener {
-            display: block;
-            transition: 0.3s;
-        }
-
-        .row.form-inline.opened {
-            margin-top: 0px;
-            height: 95px;
-        }
-
-        .rooms.opened {
-            max-height: calc(100vh - 134px);
-        }
-
-        .rooms.opened .searchopener {
-            top: 134px;
-            transition: 0.3s;
-        }
-
-        .rooms.opened .searchopener .fa-search {
-            display: none;
-        }
-        .rooms.opened .searchopener .fa-times {
-            display: inline-block;
-        }
-    }
 }
 @media screen and (max-width: 425px) {
     .main {
@@ -722,4 +668,69 @@ body {
 
 
 
+@media screen and (max-width: 540px) {
+    @media screen and (max-height: 675px) {
 
+        .menu.minimized {
+            height: 40px;
+        }
+
+        .menu.minimized .logo {
+            width: 110px;
+        }
+
+        .menu.minimized img {
+            width: 50px;
+            height: 40px;
+        }
+
+        .menu .dropdown {
+            top: 1px;
+        }
+
+        .menu .dropdown .btn {
+            vertical-align: top;
+        }
+
+        .main {
+            padding-top: 39px;
+        }
+
+        .row.form-inline {
+            margin-top: -93px;
+            transition: 0.3s;
+        }
+
+        .rooms {
+            max-height: calc(100vh - 40px);
+            transition: 0.3s;
+        }
+
+        .searchopener {
+            display: block;
+            transition: 0.3s;
+        }
+
+        .row.form-inline.opened {
+            height: 95px;
+            margin-top: 0px;
+        }
+
+        .rooms.opened {
+            max-height: calc(100vh - 134px);
+        }
+
+        .rooms.opened .searchopener {
+            top: 134px;
+            transition: 0.3s;
+        }
+
+        .rooms.opened .searchopener .fa-search {
+            display: none;
+        }
+
+        .rooms.opened .searchopener .fa-times {
+            display: inline-block;
+        }
+    }
+}
