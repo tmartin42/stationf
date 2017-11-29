@@ -64,6 +64,21 @@
       ],
       "createdAt":"2016-12-09T16:45:49.096Z",
       "updatedAt":"2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name":"Salle nulle avec un nom tres long de la mort qui tue",
+      "description":"Actinidia deliciosa et Actinidia chinensis sont originaires du sud-est de la Chine, dans la vallée du Yangzi Jiang. Il a été décrit pour la première fois vers 1750, par Chéron d'Incarville, un jésuite français. Le « yangtao », littéralement « Pêche du Yang », ou « mihoutao », « pêche des singes », poussait à l'état sauvage dans la forêt longeant le fleuve mais n'était pas cultivé, il était simplement cueilli par les Chinois qui l'appréciaient. À la fin du xixe siècle, des plants sont importés en Europe, sans qu'on s'intéresse encore à leurs fruits, puis aux États-Unis en 1904. Le fruit nommé « groseille de Chine » apparaît en Nouvelle-Zélande et en France entre 1904 et 1906 où, proposé sous la dénomination de souris végétale, il n'obtient aucun succès commercial. Le Néo-Zélandais Alexander Allison plante chez lui des graines apportées par Isabel Fraser en 1906. Les plants portent leurs premiers fruits en 1910.",
+      "capacity":1600,
+      "equipements":[
+        {
+          "name":"TV"
+        },
+        {
+          "name":"Retro Projecteur"
+        }
+      ],
+      "createdAt":"2016-12-09T16:45:49.096Z",
+      "updatedAt":"2016-12-09T16:45:49.096Z"
     }
   ]
 }

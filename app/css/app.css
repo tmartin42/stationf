@@ -7,13 +7,20 @@ body {
 .block {
     display: block;
 }
+.dispnone {
+    display: none;
+}
+
+.dispnoneimp {
+    display: none !important;
+}
 
 .menu {
     position: fixed;
     height: 100%;
     width: 100%;
     text-align: left;
-    z-index: 2;
+    z-index: 4242;
     background: white;
 }
 
@@ -25,7 +32,7 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
-    z-index: 4;
+    z-index: 4244;
 }
 
 .menu.minimized .logo.outatime {
@@ -115,7 +122,7 @@ body {
 .menu a {
     opacity: 0;
     pointer-events: none;
-    z-index: 3;
+    z-index: 4243;
     padding: 0px 35px;
     text-align: center;
     position: relative;
@@ -391,6 +398,24 @@ body {
     margin-top: 2px;
 }
 
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    width: 198px;
+}
+
+.bootstrap-datetimepicker-widget table td {
+    cursor: pointer;
+}
+
+
+.bootstrap-datetimepicker-widget table td.old, .bootstrap-datetimepicker-widget table td.new {
+    color: #9da6ad;
+}
+
+
+.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover {
+    color: #f1f1f1;
+}
+
 .message {
     display: block;
     position: fixed;
@@ -400,11 +425,10 @@ body {
     right: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: calc(100% - 80px);
     font-family: "Lekton";
     padding: 20px 30px;
     line-height: 14px;
-    height: 57px;
+    max-width: calc(100% - 100px);
     pointer-events: none;
     opacity: 0;
     color: white;
@@ -448,3 +472,25 @@ body {
     opacity: 0;
     pointer-events: none;
 }*/
+
+@media screen and (max-width: 1200px) {
+    .room .description {
+        max-height: 6vw;
+    }
+}
+@media screen and (max-width: 992px) {
+    .room {
+        margin: 4.15%;
+    }
+}
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 720px) {
+
+}
+@media screen and (max-width: 540px) {
+
+}
+

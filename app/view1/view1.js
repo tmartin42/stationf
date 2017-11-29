@@ -57,7 +57,8 @@ angular.module('myApp.view1', ['ngRoute'])
     $('#datetimepicker1').datetimepicker({
         format: 'YYYY-MM-DD HH:mm',
         stepping: 30,
-        minDate: moment()
+        minDate: moment(),
+        debug: true
     });
 
 
@@ -69,24 +70,40 @@ angular.module('myApp.view1', ['ngRoute'])
     };
 
 
+    var timeouts = [];
+
+    $scope.clearTimeouts = function() {
+        timeouts.forEach(function(e) {
+            clearTimeout(e);
+        })
+    };
+
     $scope.error = function () {
-        $('.message').removeClass('above');
-        setTimeout(function () {
+        $scope.clearTimeouts();
+        $('.message').removeClass('above').removeClass('dispnoneimp');
+        timeouts.push(setTimeout(function () {
             $('.message').addClass('error');
-        }, 100);
-        setTimeout(function () {
+        }, 100));
+        timeouts.push(setTimeout(function () {
             $('.error').removeClass('error').addClass('above');
-        }, 3100);
+        }, 3100));
+        timeouts.push(setTimeout(function () {
+            $('.message').addClass('dispnoneimp');
+        }, 3600));
     };
 
     $scope.success = function() {
-        $('.message').removeClass('above')
-        setTimeout(function () {
+        $scope.clearTimeouts();
+        $('.message').removeClass('above').removeClass('dispnoneimp');
+        timeouts.push(setTimeout(function () {
             $('.message').addClass('success');
-        }, 100);
-        setTimeout(function () {
+        }, 100));
+        timeouts.push(setTimeout(function () {
             $('.success').removeClass('success').addClass('above');
-        }, 3100);
+        }, 3100));
+        timeouts.push(setTimeout(function () {
+            $('.message').addClass('dispnoneimp');
+        }, 3600));
     };
 
     $scope.contain = function(roomName) {
@@ -96,7 +113,7 @@ angular.module('myApp.view1', ['ngRoute'])
                 ret = true;
                 return;
             }
-        })
+        });
         return ret;
     };
 
@@ -107,7 +124,7 @@ angular.module('myApp.view1', ['ngRoute'])
         console.log("Rdv le: ", data, " a la ", dataRoomName);
 
 
-        $('#exampleModal').modal('hide');
+        //$('#exampleModal').modal('hide');
 
         if (moment(data).isValid()) {
 
@@ -149,5 +166,7 @@ angular.module('myApp.view1', ['ngRoute'])
             $scope.order = "capacity";
         }
     }
+
+
 
 }]);

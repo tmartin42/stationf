@@ -26,7 +26,7 @@
         </select>
     </form>
     <div class="rooms row justify-content-left">
-        <div class="room col-2" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter() | orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
+        <div class="room col-lg-2 col-md-3 col-sm-5" ng-repeat="room in filteredrooms = (rooms | filter : greaterThan('capacity', places) | filter  :{'name': search} | filter: equfilter() | orderBy: order:rev)" class="col-md-6" data-toggle="modal" data-target="#exampleModal" ng-click="modalInit($index)">
             <p class="name">{{room.name}}</p>
             <p class="description">{{room.description}}</p>
 
@@ -72,6 +72,6 @@
         </div>
     </div>
 </div>
-<div class="message">
+<div class="message dispnoneimp">
     {{message}}
 </div>
